@@ -7,8 +7,7 @@ resource "aws_lb" "test" {
   enable_deletion_protection = true
 
   access_logs {
-    bucket  = "task3devenv"
-    region  =  "us-east-1"
+    bucket  = "acceslogselb"
     prefix  = "test-lb"
     enabled = true
   }
