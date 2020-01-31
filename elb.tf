@@ -3,11 +3,11 @@ resource "aws_lb" "test" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.allow_80_443.id]
-  vpc_zone_identifier       = [vpc_zone_identifier.vpc_zone_identifier1.id, vpc_zone_identifier.vpc_zone_identifier2.id, vpc_zone_identifier.vpc_zone_identifier3.id]
+  subnets       = ["${var.vpc_zone_identifier1}","${var.vpc_zone_identifier2}","${var.vpc_zone_identifier3}"]
   enable_deletion_protection = true
 
   access_logs {
-    bucket  = "acceslogselb"
+    bucket  = [aws_s3_bucket.b.name]
     prefix  = "test-lb"
     enabled = true
   }
