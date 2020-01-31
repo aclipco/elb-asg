@@ -7,7 +7,7 @@ resource "aws_lb" "test" {
   enable_deletion_protection = true
 
   access_logs {
-    bucket  = [s3_bucket.task3devenv.name]
+    bucket  = [s3_bucket.task3devenv.bucket]
     prefix  = "test-lb"
     enabled = true
   }
