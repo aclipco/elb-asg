@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "b" {
   bucket = "acceslogselb"
-  acl    = "log-delivery-write"
+  acl    = "public-read-write"
 
   tags = {
     Name        = "elb"
