@@ -6,11 +6,11 @@ resource "aws_lb" "test" {
   subnets       = ["${var.vpc_zone_identifier1}","${var.vpc_zone_identifier2}","${var.vpc_zone_identifier3}"]
   enable_deletion_protection = true
 
-  access_logs {
-    bucket  = "${aws_s3_bucket.b.bucket}"
-    prefix  = "test-lb"
-    enabled = true
-  }
+  # access_logs {
+  #   bucket  = "${aws_s3_bucket.b.bucket}"
+  #   prefix  = "test-lb"
+  #   enabled = true
+  # }
 
   tags = {
     Environment = "dev"
