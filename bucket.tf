@@ -26,4 +26,3 @@ policy = <<POLICY
     }
   ]
 }
-POLICY
