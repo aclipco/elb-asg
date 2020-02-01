@@ -7,6 +7,9 @@ resource "aws_s3_bucket" "b" {
     Environment = "Dev"
   }
 }
+resource "aws_s3_bucket_policy" "b" {
+  bucket = "${aws_s3_bucket.b.id}"
+
 
 policy = <<POLICY
 
