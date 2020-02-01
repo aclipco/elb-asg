@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "b" {
 resource "aws_s3_bucket_policy" "b" {
   bucket = "${aws_s3_bucket.b.id}"
 
-
+}
 policy = <<POLICY
 
 {
@@ -26,3 +26,4 @@ policy = <<POLICY
     }
   ]
 }
+POLICY
