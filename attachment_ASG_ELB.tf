@@ -3,3 +3,5 @@ resource "aws_autoscaling_attachment" "asg_attachment_bar" {
   elb                    = "test-lb-tf"
 }
 
+ depends_on = [aws_lb.test]
+}
